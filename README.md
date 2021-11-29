@@ -1,4 +1,6 @@
 # Lab 10 - Starter
 Roadmap: https://cse110-lab10-williamli0201.canny.io/
 
-https://github.com/WilliamLi0201/Lab10_Starter/blob/main/index.html
+https://williamli0201.github.io/Lab10_Starter/index.html
+
+https://williamli0201.github.io/Lab10_Starter/Speaksynth.html
