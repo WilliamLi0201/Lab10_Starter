@@ -11,6 +11,7 @@
   <!-- Main Stylesheet & Scripts -->
   <link rel="stylesheet" href="assets/styles/global.css" />
   <script src="assets/scripts/speechSynth.js" type="module"></script>
+  <script src="https://unpkg.com/launchdarkly-js-client-sdk@2"></script>
 </head>
 
 <body>
@@ -32,6 +33,23 @@
       <button>Press to Talk</button>
     </section>
   </main>
+  <script>
+    var user = {
+      key: Math.random().toString(36).substring(5, 20)
+    };
+  
+    var ldclient = LDClient.initialize('61a419212b64630f230aba74', user);
+  
+    function render() {
+      var shouldShow = ldclient.variation('purple-background', false);
+      if(shouldShow){
+        document.body.classList.add("purple");
+      }
+    }
+  
+    ldclient.on('ready', render);
+    ldclient.on('change', render);
+  </script>
 </body>
 
 </html>
